@@ -11,9 +11,9 @@ spring:
       suffix: .jsp
       
   datasource:
-    driver-class-name: oracle.jdbc.driver.OracleDriver
-    url: jdbc:oracle:thin:@localhost:1521/xe
-    username: system
+    driver-class-name: org.mariadb.jdbc.Driver
+    url: jdbc:mariadb://{127.0.0.1}:11260/baemini
+    username: root
     password: 1234
   
   servlet:
@@ -28,9 +28,6 @@ spring:
           google:
             scope: email, profile
           
-        
- 
-    
 mybatis:
   configuration:
     map-underscore-to-camel-case: true
@@ -39,7 +36,7 @@ mybatis:
   type-aliases-package: com.baemin.dto
     
 server:
-  port: 8989
+  port: 11270
 
 resource:
   nodeValue: D:/resource
